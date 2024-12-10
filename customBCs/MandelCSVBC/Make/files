@@ -1,0 +1,3 @@
+MandelCSVBCFvPatchVectorField.C
+
+LIB = $(FOAM_USER_LIBBIN)/MandelCSVBC

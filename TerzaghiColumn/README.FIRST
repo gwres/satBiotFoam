@@ -1,0 +1,27 @@
+How to run me:
+
+
+
+#To clean the directory, this is optional
+
+foamCleanTutorials
+
+foamCleanPolyMesh
+
+rm -rf 0
+
+cp -r 0.orig/ 0
+
+blockMesh
+
+checkMesh
+
+funkySetFields -time 0
+
+funkySetBoundaryField -time 0
+
+touch result.foam
+
+satBiotFoam > logsol
+
+touch result.foam

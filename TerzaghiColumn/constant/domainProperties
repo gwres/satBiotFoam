@@ -1,0 +1,47 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  3.0.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      domainProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+rho_f          rho_f [1 -3 0 0 0 0 0] 997;
+
+ag                ag [0 1 -2 0 0 0 0] 9.81;
+
+couplingParameter	classical; 
+//~ couplingParameter	lambda; 
+//~ couplingParameter	optimal; 
+
+dimensionality		1;
+
+phi_0			0.375;
+
+//~ beta				4.4e-10;
+beta				4.4e-8;
+
+beta1				1.0;
+
+beta2				1.0;
+
+alpha          alpha [0 0 0 0 0 0 0] 1;
+
+Sf                Sf [0 0 -1 0 0 0 0] 0;
+
+fb                fb [1 -2 -2 0 0 0 0] 0;
+
+err_lim      err_lim [0 0 0 0 0 0 0] 1e-6;
+
+
+
+
+// ************************************************************************* //

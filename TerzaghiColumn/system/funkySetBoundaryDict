@@ -1,0 +1,38 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      funkySetBoundaryDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+displacement
+{
+	field u;
+	expressions
+	(
+		{
+			target		value;
+			patchName	top;
+			//~ expression "vector(0,0,-1.618123e-6*pos().z)";
+			expression "vector(0,0,-5.537098e-5*pos().z)";
+		}
+		{
+		    target		value;
+		    patchName	bottom;
+			//~ expression "vector(0,0,-1.618123e-6*pos().z)";
+			expression "vector(0,0,-5.537098e-5*pos().z)";
+		}
+	);
+}
+
+
+// ************************************************************************* //
